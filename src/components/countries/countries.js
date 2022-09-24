@@ -12,10 +12,12 @@ const Countries = () => {
     }, [])
     return (
         <div>
+            <div>
             <h1>Total Countries: {countries.length}</h1>
+            </div>
             <div className='countries'>
             {
-                countries.map(country => <Country name={country.name.common} flags = {country.flags} population = {country.population} region={country.region} area={country.area}/>)
+                countries.map((country) => <Country key = {country.ccn3} country={country}></Country>)
             }
             </div>
             
